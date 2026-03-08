@@ -1,0 +1,41 @@
+/* body */
+body {
+    background-color: #FFF;
+    color: #555;
+}
+
+/* header */
+header {
+    background-color: #002171;
+    color: #FFF;
+}
+
+/* nav */
+nav {
+    background-color: #BBDEFB;
+}
+
+/* h1 */
+h1 {
+    margin-bottom: 0; /* mb0 */
+}
+
+/* h2 */
+h2 {
+    color: #1976D2;
+}
+
+/* dt */
+dt {
+    color: #002171;
+}
+
+/* address */
+address {
+    font-style: normal;
+}
+
+/* .resort */
+.resort {
+    color: #1976D2;
+}
