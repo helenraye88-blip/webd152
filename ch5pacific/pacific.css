@@ -1,0 +1,44 @@
+/* body{bgcolor:#FFF+c:#555} */
+body {
+  background-color: #FFF;
+  color: #555;
+}
+
+/* header{bgcolor:#002171+c:#FFF+bgi:url+bgr:no-repeat+bgp:top right} */
+header {
+  background-color: #002171;
+  color: #FFF;
+  background-image: url(images/sunset.jpg);
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+/* nav{bgcolor:#BBDEFB} */
+nav {
+  background-color: #BBDEFB;
+}
+
+/* h1{mb:0} */
+h1 {
+  margin-bottom: 0;
+}
+
+/* h2{c:#1976D2} */
+h2 {
+  color: #1976D2;
+}
+
+/* dt{c:#002171} */
+dt {
+  color: #002171;
+}
+
+/* address{fst:n} */
+address {
+  font-style: normal;
+}
+
+/* .resort{c:#1976D2} */
+.resort {
+  color: #1976D2;
+}
