@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #90C7E3;
+  background-image: linear-gradient(white, #90C7E3);
+  background-repeat: no-repeat;
+  border: 1px solid #003;
+  box-shadow: 3px 3px 3px #333;
+  font-family: 'Lato', Georgia, serif;
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  margin: 0 auto;
+  max-width: 90rem;
+  width: 95%;
+}
+
+header {
+  background-color: #466B6A;
+  background-image: url("images/headerbackblue.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 1rem 1rem 0.5rem;
+  position: relative;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2rem;
+  letter-spacing: 0.25em;
+  margin: 0;
+  padding: 0;
+}
+
+header a:link,
+header a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+#sunset-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 75px;
+  object-fit: cover;
+}
+
+/* Navigation - mobile first (vertical) */
+nav {
+  background-color: #466B6A;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  border-bottom: 1px solid #90C7E3;
+  padding: 0;
+}
+
+nav a:link,
+nav a:visited {
+  color: #FFF;
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:active {
+  background-color: #90C7E3;
+  color: #003;
+}
+
+/* Hero Images */
+#homehero,
+#yurthero,
+#trailhero {
+  background-size: cover;
+  background-position: center;
+  height: 18.75rem;
+}
+
+#homehero {
+  background-image: url("images/coasthero.jpg");
+}
+
+#yurthero {
+  background-image: url("images/yurthero.jpg");
+}
+
+#trailhero {
+  background-image: url("images/trailhero.jpg");
+}
+
+main {
+  background-color: #FFF;
+  overflow: auto;
+  overflow-wrap: break-word;
+  padding: 1px 1.5rem 1.5rem;
+}
+
+h2 {
+  color: #466B6A;
+  font-family: 'Playfair Display', Georgia, serif;
+  text-shadow: 1px 1px #CCC;
+}
+
+h3 {
+  color: #466B6A;
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+address {
+  font-style: normal;
+  line-height: 1.8;
+}
+
+/* Card layout - mobile first (stacked) */
+.card-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow-wrap: break-word;
+}
+
+.card-row section {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1.25rem 1.5rem;
+  width: 100%;
+}
+
+footer {
+  background-color: #466B6A;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  padding: 2rem;
+  text-align: center;
+  clear: both;
+}
+
+footer a:link,
+footer a:visited {
+  color: #90C7E3;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* =====================
+   MEDIA QUERIES
+   ===================== */
+
+/* Small screens - remove decorative styles */
+@media screen and (max-width: 32.5rem) {
+  body {
+    background-image: none;
+    border: none;
+    box-shadow: none;
+  }
+
+  #wrapper {
+    width: 100%;
+  }
+
+  header {
+    background-image: none;
+    padding: 0.75rem;
+  }
+
+  #sunset-corner {
+    display: none;
+  }
+
+  footer {
+    padding: 1rem;
+  }
+}
+
+/* Large screens - horizontal nav, side-by-side cards */
+@media screen and (min-width: 37.5rem) {
+  nav ul {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  nav li {
+    border-bottom: none;
+  }
+
+  .card-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .card-row section {
+    flex: 1 1 calc(33% - 2rem);
+    min-width: 200px;
+  }
+}
