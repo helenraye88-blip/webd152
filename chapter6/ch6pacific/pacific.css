@@ -1,42 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
 body {
   background-color: #90C7E3;
-  background-image: linear-gradient(#FFFFFF, #90C7E3);
+  background-image: linear-gradient(white, #90C7E3);
   background-repeat: no-repeat;
-  color: #666666;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Lato', Georgia, serif;
+  margin: 0;
+  padding: 0;
 }
 
 #wrapper {
-  background-color: #FFFFFF;
-  box-shadow: 3px 3px 3px #333333;
+  background-color: white;
+  box-shadow: 3px 3px 3px #333;
   margin: auto;
   min-width: 960px;
   max-width: 2048px;
   width: 80%;
+  position: relative;
 }
 
 header {
-  background-color: #002171;
-  color: #FFFFFF;
+  background-color: #466B6A;
+  color: white;
   height: 60px;
   padding-top: 15px;
   text-align: center;
+  position: relative;
 }
 
-h1 {
+header h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2em;
   margin: 0;
+  padding: 0;
+}
+
+#sunset-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 75px;
+  object-fit: cover;
 }
 
 nav {
-  background-color: #FFFFFF;
+  background-color: #FFF;
   padding: 1em;
   text-align: center;
 }
 
 nav a {
-  text-decoration: none;
+  color: #466B6A;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.25em;
   font-weight: bold;
-  padding: 0.5em;
+  padding: 0 1em;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #90C7E3;
+  text-decoration: underline;
 }
 
 main {
@@ -44,31 +69,40 @@ main {
 }
 
 h2 {
-  text-shadow: 1px 1px #CCCCCC;
+  color: #466B6A;
+  font-family: 'Playfair Display', Georgia, serif;
+  text-shadow: 1px 1px #CCC;
 }
 
 footer {
+  background-color: #466B6A;
+  color: white;
+  font-family: 'Lato', sans-serif;
   padding: 2em;
-  font-size: 75%;
-  font-style: italic;
   text-align: center;
 }
 
-/* Hero images */
+footer a {
+  color: white;
+}
 
-#homehero, #yurthero, #trailhero {
+/* Hero Image Selectors */
+#homehero,
+#yurthero,
+#trailhero {
   background-size: cover;
+  background-position: center;
   height: 18.75rem;
 }
 
 #homehero {
-  background-image: url(images/coast2.jpg);
+  background-image: url("images/coasthero.jpg");
 }
 
 #yurthero {
-  background-image: url(images/yurt.jpg);
+  background-image: url("images/yurthero.jpg");
 }
 
 #trailhero {
-  background-image: url(images/trail.jpg);
+  background-image: url("images/trailhero.jpg");
 }
