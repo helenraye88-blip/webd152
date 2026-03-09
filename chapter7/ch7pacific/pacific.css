@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #EAEAEA;
+  font-family: 'Lato', Georgia, serif;
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  background-color: #90C7E3;
+  background-image: linear-gradient(white, #90C7E3);
+  background-repeat: no-repeat;
+  border: 1px solid #003;
+  box-shadow: 3px 3px 3px #333;
+  margin: auto;
+  min-width: 960px;
+  max-width: 2048px;
+  width: 80%;
+  position: relative;
+}
+
+header {
+  background-color: #466B6A;
+  color: white;
+  height: 60px;
+  padding-top: 15px;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2em;
+  letter-spacing: 0.25em;
+  margin: 0;
+  padding: 0;
+}
+
+#sunset-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 75px;
+  object-fit: cover;
+}
+
+nav {
+  float: left;
+  font-size: 120%;
+  padding: 1.5em;
+  width: 160px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a:link,
+nav a:visited {
+  color: #5C7FA3;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  padding: 0.4em 0;
+}
+
+nav a:hover,
+nav a:active {
+  color: #466B6A;
+  text-decoration: underline;
+}
+
+/* Hero Images */
+#homehero,
+#yurthero,
+#trailhero {
+  background-size: cover;
+  background-position: center;
+  height: 18.75rem;
+  margin-left: 190px;
+}
+
+#homehero {
+  background-image: url("images/coasthero.jpg");
+}
+
+#yurthero {
+  background-image: url("images/yurthero.jpg");
+}
+
+#trailhero {
+  background-image: url("images/trailhero.jpg");
+}
+
+main {
+  background-color: #FFF;
+  margin-left: 190px;
+  padding-left: 30px;
+  overflow: auto;
+  padding-top: 1px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+h2 {
+  color: #466B6A;
+  font-family: 'Playfair Display', Georgia, serif;
+  text-shadow: 1px 1px #CCC;
+}
+
+h3 {
+  color: #466B6A;
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+section {
+  float: left;
+  padding-left: 2em;
+  padding-right: 2em;
+  width: 33%;
+}
+
+footer {
+  background-color: #FFF;
+  color: #333;
+  font-family: 'Lato', sans-serif;
+  margin-left: 190px;
+  padding: 2em;
+  text-align: center;
+  clear: both;
+}
+
+footer a {
+  color: #5C7FA3;
+}
