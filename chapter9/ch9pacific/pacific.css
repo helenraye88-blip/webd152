@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #EAEAEA;
+  font-family: 'Lato', Georgia, serif;
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  background-color: #90C7E3;
+  background-image: linear-gradient(white, #90C7E3);
+  background-repeat: no-repeat;
+  border: 1px solid #003;
+  box-shadow: 3px 3px 3px #333;
+  margin: auto;
+  min-width: 960px;
+  max-width: 2048px;
+  width: 80%;
+  position: relative;
+}
+
+header {
+  background-color: #466B6A;
+  color: white;
+  height: 60px;
+  padding-top: 15px;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2em;
+  letter-spacing: 0.25em;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sunset hidden by default, only shows on small screens */
+#sunset-corner {
+  display: none;
+}
+
+nav {
+  float: left;
+  font-size: 120%;
+  padding: 1.5em;
+  width: 160px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a:link,
+nav a:visited {
+  color: #5C7FA3;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  padding: 0.4em 0;
+}
+
+nav a:hover,
+nav a:active {
+  color: #466B6A;
+  text-decoration: underline;
+}
+
+/* Hero Images */
+#homehero,
+#yurthero,
+#trailhero {
+  background-size: cover;
+  background-position: center;
+  height: 18.75rem;
+  margin-left: 190px;
+}
+
+#homehero {
+  background-image: url("images/coasthero.jpg");
+}
+
+#yurthero {
+  background-image: url("images/yurthero.jpg");
+}
+
+#trailhero {
+  background-image: url("images/trailhero.jpg");
+}
+
+main {
+  background-color: #FFF;
+  margin-left: 190px;
+  padding: 1px 20px 20px 30px;
+  overflow: auto;
+}
+
+h2 {
+  color: #466B6A;
+  font-family: 'Playfair Display', Georgia, serif;
+  text-shadow: 1px 1px #CCC;
+}
+
+h3 {
+  color: #466B6A;
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+section {
+  float: left;
+  padding-left: 2em;
+  padding-right: 2em;
+  width: 33%;
+}
+
+address {
+  font-style: normal;
+  line-height: 1.8;
+}
+
+address a:link,
+address a:visited {
+  color: #466B6A;
+  text-decoration: none;
+}
+
+address a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #FFF;
+  color: #333;
+  font-family: 'Lato', sans-serif;
+  margin-left: 190px;
+  padding: 2em;
+  text-align: center;
+  clear: both;
+}
+
+footer a:link,
+footer a:visited {
+  color: #5C7FA3;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* =====================
+   TABLE STYLES
+   ===================== */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+#special {
+  clear: both;
+  padding: 1em 0;
+}
+
+#special h3 {
+  color: #466B6A;
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+#special p {
+  margin-bottom: 1em;
+}
+
+/* Mobile-first: stacked table cells */
+#special table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+#special td,
+#special th {
+  display: block;
+  width: 100%;
+}
+
+#special th {
+  height: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 0.625rem;
+  border: none;
+  overflow: hidden;
+}
+
+#special td {
+  border-bottom: 1px solid #ddd;
+  padding: 0.5em 1em;
+  text-align: right;
+}
+
+td.package::before {
+  content: "Package: ";
+  font-weight: bold;
+  float: left;
+  color: #466B6A;
+}
+
+td.description::before {
+  content: "Description: ";
+  font-weight: bold;
+  float: left;
+  color: #466B6A;
+}
+
+td.nights::before {
+  content: "Nights: ";
+  font-weight: bold;
+  float: left;
+  color: #466B6A;
+}
+
+td.cost::before {
+  content: "Cost: ";
+  font-weight: bold;
+  float: left;
+  color: #466B6A;
+}
+
+tbody tr {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 1px solid #466B6A;
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+tbody tr:hover {
+  background-color: #fff4cc;
+  color: #333333;
+}
+
+/* Hide sunset image at ~520px and above */
+@media screen and (max-width: 32.5rem) {
+  #sunset-corner {
+    display: block;
+    width: 100%;
+    height: 60px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 32.5rem) {
+  #sunset-corner {
+    display: none;
+  }
+}
+
+/* Large screen table - show as proper table */
+@media screen and (min-width: 37.5rem) {
+
+  #special table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  #special td,
+  #special th {
+    display: table-cell;
+    width: auto;
+    text-align: left;
+    padding: 0.75em 1em;
+  }
+
+  #special th {
+    height: auto;
+    font-size: 1rem;
+    overflow: visible;
+    background-color: #466B6A;
+    color: white;
+  }
+
+  #special thead {
+    display: table-header-group;
+  }
+
+  #special tbody tr {
+    display: table-row;
+    border: none;
+    margin-bottom: 0;
+  }
+
+  #special tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  td.package::before,
+  td.description::before,
+  td.nights::before,
+  td.cost::before {
+    content: "";
+    float: none;
+  }
+
+  #special td {
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  td.nights,
+  td.cost {
+    text-align: center;
+  }
+}
