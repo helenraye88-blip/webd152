@@ -1,0 +1,764 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #EAEAEA;
+  font-family: 'Lato', Georgia, serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* wrapper - mobile first: full width */
+#wrapper {
+  background-color: #90C7E3;
+  background-image: linear-gradient(white, #90C7E3);
+  background-repeat: no-repeat;
+  margin: auto;
+  width: 100%;
+}
+
+header {
+  background-color: #466B6A;
+  color: white;
+  height: 60px;
+  padding-top: 15px;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2em;
+  letter-spacing: 0.25em;
+  margin: 0;
+  padding: 0;
+}
+
+/* sunset image - hidden by default, shown on small screens */
+#sunset-corner {
+  display: none;
+  width: 100%;
+  height: 60px;
+  object-fit: cover;
+}
+
+/* nav - mobile first: flex column */
+nav {
+  font-size: 120%;
+  padding: 1.5em;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  border-bottom: 1px solid #ddd;
+}
+
+/* NAV TRANSITION - smooth color change on hover */
+nav a:link,
+nav a:visited {
+  color: #5C7FA3;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  padding: 0.4em 0;
+  transition: color 0.3s ease-out;
+}
+
+nav a:hover,
+nav a:active {
+  color: #466B6A;
+  text-decoration: underline;
+}
+
+/* Hero images - mobile first: full width */
+#homehero,
+#yurthero,
+#trailhero,
+#reservationshero {
+  background-size: cover;
+  background-position: center;
+  height: 18.75rem;
+  width: 100%;
+}
+
+#homehero {
+  background-image: url("images/coasthero.jpg");
+}
+
+#yurthero {
+  background-image: url("images/yurthero.jpg");
+}
+
+#trailhero {
+  background-image: url("images/trailhero.jpg");
+}
+
+#reservationshero {
+  background-image: url("images/reservations.jpg");
+}
+
+/* main - mobile first */
+main {
+  background-color: #FFF;
+  padding: 1px 20px 20px 30px;
+  overflow: auto;
+}
+
+h2 {
+  color: #466B6A;
+  font-family: 'Playfair Display', Georgia, serif;
+  text-shadow: 1px 1px #CCC;
+}
+
+h3 {
+  color: #466B6A;
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* section - mobile first: stacked */
+section {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+address {
+  font-style: normal;
+  line-height: 1.8;
+}
+
+address a:link,
+address a:visited {
+  color: #466B6A;
+  text-decoration: none;
+}
+
+address a:hover {
+  text-decoration: underline;
+}
+
+.resort {
+  color: #1976D2;
+}
+
+footer {
+  background-color: #FFF;
+  color: #333;
+  font-family: 'Lato', sans-serif;
+  padding: 2em;
+  text-align: center;
+}
+
+footer a:link,
+footer a:visited {
+  color: #5C7FA3;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* =====================
+   VIDEO STYLES - mobile first: stacked
+   ===================== */
+
+#video-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em 0;
+}
+
+#video-wrap p {
+  margin: 0;
+}
+
+#video-wrap video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =====================
+   GALLERY STYLES
+   ===================== */
+
+#photo-gallery {
+  padding: 1em 0 2em 0;
+}
+
+#photo-gallery h2 {
+  color: #466B6A;
+  font-family: 'Playfair Display', Georgia, serif;
+  text-shadow: 1px 1px #CCC;
+}
+
+/* CSS Grid - mobile first: 1 column */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.gallery-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* hover effect on gallery images */
+.gallery-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.gallery-image:hover img {
+  transform: scale(1.1);
+}
+
+/* caption fades in on hover */
+.gallery-image figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(70, 107, 106, 0.85);
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9em;
+  padding: 0.5em 1em;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-image:hover figcaption {
+  opacity: 1;
+}
+
+/* =====================
+   TABLE STYLES
+   ===================== */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+#special {
+  padding: 1em 0;
+}
+
+#special h3 {
+  color: #466B6A;
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+#special p {
+  margin-bottom: 1em;
+}
+
+#special table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#special thead {
+  display: none;
+}
+
+#special td {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  padding: 0.5em 1em;
+  text-align: right;
+}
+
+td.package::before {
+  content: "Package: ";
+  font-weight: bold;
+  float: left;
+  color: #466B6A;
+}
+
+td.description::before {
+  content: "Description: ";
+  font-weight: bold;
+  float: left;
+  color: #466B6A;
+}
+
+td.nights::before {
+  content: "Nights: ";
+  font-weight: bold;
+  float: left;
+  color: #466B6A;
+}
+
+td.cost::before {
+  content: "Cost: ";
+  font-weight: bold;
+  float: left;
+  color: #466B6A;
+}
+
+tr {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+tbody tr {
+  border: 1px solid #466B6A;
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+tbody tr:hover {
+  background-color: #fff4cc;
+  color: #333333;
+}
+
+/* =====================
+   FORM STYLES - mobile first
+   ===================== */
+
+#reservations {
+  background-color: #FFF;
+  padding: 1em 2em 2em 2em;
+}
+
+#reservations h2 {
+  color: #466B6A;
+  font-family: 'Playfair Display', Georgia, serif;
+  text-shadow: 1px 1px #CCC;
+}
+
+#reservations p {
+  margin-bottom: 1.5em;
+  color: #555;
+}
+
+fieldset {
+  border: 1px solid #90C7E3;
+  border-radius: 4px;
+  margin-bottom: 1.5em;
+  padding: 1em 1.5em;
+}
+
+legend {
+  color: #466B6A;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 0 0.5em;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.form-group label {
+  color: #466B6A;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  margin-bottom: 0.3em;
+}
+
+.form-group input,
+.form-group textarea {
+  border: 1px solid #90C7E3;
+  border-radius: 4px;
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  padding: 0.5em;
+  width: 100%;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #466B6A;
+  outline: none;
+}
+
+.form-group textarea {
+  height: 8em;
+  resize: vertical;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+input[type="submit"] {
+  background-color: #466B6A;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 0.5em;
+  padding: 0.75em 2em;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+input[type="submit"]:hover {
+  background-color: #5C7FA3;
+}
+
+/* =====================
+   SMALL SCREENS max-width 32.5rem (~520px)
+   ===================== */
+@media screen and (max-width: 32.5rem) {
+  #sunset-corner {
+    display: block;
+  }
+
+  #wrapper {
+    border: none;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  /* video centered on small screens */
+  #video-wrap {
+    align-items: center;
+  }
+
+  #reservations {
+    padding: 0.5em 1em 1em 1em;
+  }
+
+  fieldset {
+    padding: 0.75em 1em;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+  }
+}
+
+/* =====================
+   LARGE SCREENS min-width 37.5rem (600px)
+   ===================== */
+@media screen and (min-width: 37.5rem) {
+
+  #wrapper {
+    border: 1px solid #003;
+    box-shadow: 3px 3px 3px #333;
+    max-width: 2048px;
+    width: 80%;
+  }
+
+  #content-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  nav {
+    flex-shrink: 0;
+    width: 160px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  #right-side {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  #homehero,
+  #yurthero,
+  #trailhero,
+  #reservationshero {
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  main {
+    flex: 1;
+  }
+
+  .section-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1em;
+  }
+
+  .section-row section {
+    flex: 1;
+  }
+
+  /* video side by side with text on large screens */
+  #video-wrap {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  #video-wrap p {
+    flex: 1;
+  }
+
+  #video-wrap video {
+    flex: 1;
+    max-width: 50%;
+  }
+
+  /* form rows side by side */
+  .form-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1em;
+  }
+
+  .form-row .form-group {
+    flex: 1;
+  }
+
+  input[type="submit"] {
+    width: auto;
+  }
+
+  /* large screen table */
+  #special thead {
+    display: table-header-group;
+  }
+
+  #special table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  #special td,
+  #special th {
+    display: table-cell;
+    width: auto;
+    text-align: left;
+    padding: 0.75em 1em;
+  }
+
+  #special th {
+    height: auto;
+    font-size: 1rem;
+    overflow: visible;
+    background-color: #466B6A;
+    color: white;
+  }
+
+  #special tbody tr {
+    display: table-row;
+    border: none;
+    margin-bottom: 0;
+  }
+
+  #special tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  td.package::before,
+  td.description::before,
+  td.nights::before,
+  td.cost::before {
+    content: "";
+    float: none;
+  }
+
+  #special td {
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  td.nights,
+  td.cost {
+    text-align: center;
+  }
+}
+
+/* =====================
+   ABOUT PAGE STYLES
+   ===================== */
+
+#abouthero {
+  background-image: url("images/coasthero.jpg");
+  background-size: cover;
+  background-position: center top;
+  height: 18.75rem;
+  width: 100%;
+}
+
+/* CSS Grid layout - mobile first: 1 column */
+#about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+  padding: 0.5em 0 1em 0;
+}
+
+#about-text h3 {
+  border-left: 4px solid #90C7E3;
+  padding-left: 0.6em;
+  margin-top: 1.5em;
+}
+
+#about-text h3:first-child {
+  margin-top: 0;
+}
+
+#about-text p {
+  line-height: 1.8;
+  color: #444;
+}
+
+.founder-card {
+  background-color: #f7fbfd;
+  border: 1px solid #90C7E3;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1.5em;
+}
+
+.about-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.founder-info {
+  padding: 1em 1.2em 1.2em;
+}
+
+.founder-info h3 {
+  margin-top: 0;
+  color: #466B6A;
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.founder-info p {
+  color: #555;
+  line-height: 1.6;
+  margin: 0.3em 0;
+}
+
+.founder-details {
+  list-style: none;
+  padding: 0;
+  margin: 0.8em 0 0 0;
+}
+
+.founder-details li {
+  color: #555;
+  font-size: 0.95em;
+  padding: 0.3em 0;
+  border-bottom: 1px solid #e0eff5;
+}
+
+.founder-details li:last-child {
+  border-bottom: none;
+}
+
+.founder-details i {
+  color: #5C7FA3;
+  width: 1.2em;
+  margin-right: 0.4em;
+}
+
+.about-values {
+  background-color: #466B6A;
+  border-radius: 6px;
+  padding: 1.2em 1.4em;
+  color: white;
+}
+
+.about-values h3 {
+  color: white;
+  font-family: 'Playfair Display', Georgia, serif;
+  margin-top: 0;
+}
+
+.values-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.values-list li {
+  padding: 0.4em 0;
+  font-size: 0.95em;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.values-list li:last-child {
+  border-bottom: none;
+}
+
+.values-list i {
+  color: #90C7E3;
+  margin-right: 0.5em;
+}
+
+@media screen and (min-width: 56.25rem) {
+  #about-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  #abouthero {
+    width: 100%;
+    flex-shrink: 0;
+  }
+}
+
+/* gallery: 2 columns at 900px */
+@media screen and (min-width: 56.25rem) {
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* gallery: 3 columns at 1200px */
+@media screen and (min-width: 75rem) {
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
